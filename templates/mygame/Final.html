@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Final Results
+{% endblock %}
+
+{% block content %}
+	<table class="table">
+        <tr>
+            <th>Round</th>
+            <th>Player and pts</th>
+        </tr>
+        {% for p in player_in_all_rounds %}
+            <tr>
+                <td>{{ p.round_number }}</td>
+                <td>{{ p.pts}}
+            </tr>
+        {% endfor %}
+    </table>
+
+    <p>
+        Your total points is therefore {{ pts }}  {%if pts > 100 %} and Congratulations You are  <B>SELECTED</b> {%else %} and you are not not selected {%endif %}
+    </p>
+
+    {% next_button %}
+{% endblock %}
+
+

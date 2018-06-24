@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+	<p></b>Total points of this participant upto round {{subsession.round_number}} is  <b> {{pts}}</b> </p>
+	<p></b>rank of this participant after round {{subsession.round_number}} is  <b> {{rank}}</b> </p>
+    {% next_button %}
+{% endblock %}
+
+

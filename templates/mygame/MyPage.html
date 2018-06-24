@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    round number {{subsession.round_number}}
+{% endblock %}
+
+{% block content %}
+
+    Enter the points you want to give
+    {% formfield player.pts with label="enter the points" %}
+
+   
+
+    {% next_button %}
+
+{% endblock %}
